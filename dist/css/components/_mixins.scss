@@ -1,0 +1,30 @@
+
+@mixin wrapper{
+  max-width: $page-width;
+  margin: 0 auto;
+  @extend .clearfix;
+}
+
+@mixin wrapper-small{
+  max-width: $wrapper-small;
+  margin:0 auto;
+}
+
+@mixin fontbase($ff){
+  font-family: $ff;
+}
+
+@mixin button-slider-nav{
+  text-indent: -9999px;
+  border:none;
+  background: $gray-light;
+  width:  14px;
+  height: 14px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  &:hover{
+    background: $gray;
+    @extend .transition;
+  }
+}

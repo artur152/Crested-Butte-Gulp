@@ -1,0 +1,129 @@
+.tabs{
+  position: relative;
+  z-index: 3;
+  padding: 20px 0 25px 0;
+  border: 1px solid $white;
+  background-color: $primary-color;
+  .tabs-buttons{
+    position: relative;
+    z-index: 2;
+    max-width: 920px;
+    margin: 0 auto;
+    ul{
+      list-style: none;
+      display: table;
+      width:100%;
+      margin: 0;
+      padding:0;
+      li{
+        float: left;
+        margin-right: 1.6%;
+        width: 23.8%;
+        &.ui-tabs-active{
+          a{
+            background: transparent;
+            color: $white;
+          }
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        a{
+          display: block;
+          padding: 20px 0;
+          background: $white;
+          color: $gray;
+          border: 1px solid $white;
+          &:hover{
+            background: transparent;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .tab{
+    @extend .clearfix;
+    display: block;
+    max-width: 1000px;
+    margin: 35px auto 0;
+    .booking-form {
+      @extend .clearfix;
+      .datepicker{
+        width: 17%;
+        background-image: url(../img/calendar.png);
+      }
+    }
+    .select {
+      margin-top: 20px;
+      margin-right: 45px;
+      display: inline-block;
+      border-bottom: 1px solid $white;
+      &:last-child {
+        margin-right: 0;
+      }
+      label{
+        font-family: $font-book;
+        font-size: 19px;
+        line-height: 40px;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+    .input-number {
+      width: 30%;
+      input[type="number"] {
+        position: relative;
+        width: 60px;
+        font-size: 26px;
+        text-align: justify;
+        float: right;
+        background-image: url("../img/arrow-input.png");
+        background-position: 100% 8px;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        background: transparent;
+        width: 20px;
+        height: 40px;
+        position: relative;
+        right: 0;
+        bottom: 0;
+      }
+      input[type="number"]{
+        -moz-appearance: menuarrow;
+      }
+    }
+    .primary-button {
+      float: right;
+    }
+
+    &.tab-flights{
+      display: none;
+      .guests{
+        input{
+          width: 50px;
+        }
+      }
+    }
+    &.tab-tickets{
+      display: none;
+    }
+    &.tab-deals{
+      display: none;
+    }
+  }
+}
+
+form.email{
+  input[type='text']{
+    @extend .input-secondary;
+    vertical-align: top;
+  }
+  input[type='submit']{
+    @extend .secondary-button;
+    margin-left: 5px;
+    vertical-align: top;
+  }
+}

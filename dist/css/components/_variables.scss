@@ -1,0 +1,39 @@
+/*____________________ Colors _________________*/
+$black: #000;
+$white: #fff;
+
+
+
+$black-border: rgba(0, 0, 0, 0.15);
+$page: #1f1f1f;
+$gray: #393A3F;
+$gray-light: #9C9C9C;
+$gray-light-bg: #F7F7F7;
+$gray-light-2: #676364;
+$gray-light-ccc: #cccccc;
+$red: #BD1A20;
+$red-light: #BF5156;
+$red-dark: #962427;
+$darken-red: darken($red,4%);
+$blue: #0080C9;
+$blue-light: #00B8EC;
+$green: #64dd17;
+
+$primary-color: $red;
+
+$circle-size: 190px;
+
+/*____________________ Fonts _________________*/
+$font-regular: "gotham-medium", sans-serif;
+$font-bold:   "gotham-bold", sans-serif;
+$font-light:  "gotham-light", sans-serif;
+$font-book:   "gotham-book", sans-serif;
+
+
+/*____________________ Wrapper  _________________*/
+$page-width: 1330px;
+$wrapper-small: 900px;
+
+
+
+

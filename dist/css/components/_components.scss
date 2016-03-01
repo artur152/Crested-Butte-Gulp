@@ -1,0 +1,471 @@
+
+.clearfix{
+  &:after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.wrapper{
+  @include wrapper;
+}
+
+.wrapper-small{
+  @include wrapper-small;
+}
+
+.transition {
+  transition: all .2s ease 0s;
+}
+
+.play-button {
+  &:before {
+    content: '';
+    position: absolute;
+    z-index:1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    border-right: 0 solid transparent;
+    border-left: 15px solid $white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid $white;
+    border-radius: 50%;
+  }
+}
+
+.slider-arrow{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -25px;
+  background: none;
+  border: none;
+  text-indent: -9999px;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  padding: 0;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width:  10px;
+    height: 10px;
+    border-left: 2px solid $page;
+    border-bottom: 2px solid $page;
+    transform: rotate(45deg);
+  }
+}
+
+.social-share{
+  ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @extend .clearfix;
+    li {
+      float: left;
+      margin-right: 20px;
+      &:last-child{
+        margin-right: 0;
+      }
+      a{
+        float: left;
+        text-indent: -9999px;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url(../img/sc-social.png);
+        background-position: 0 0;
+        background-repeat:no-repeat;
+        border-radius: 50%;
+        width:  60px;
+        height: 60px;
+        &:hover{
+          @extend .transition;
+          background-color: hsla(0, 0, 50%, 0.5);
+        }
+      }
+      .facebook{
+        background-position: 20px 50%;
+      }
+      .twitter{
+        background-position: -50px 50%;
+      }
+      .pinterest{
+        background-position: -130px 50%;
+      }
+      .instagram{
+        background-position: -207px 50%;
+      }
+      .vimeo {
+        background-position: -285px 50%;
+      }
+    }
+  }
+}
+
+.weather{
+  @extend .clearfix;
+  display: table;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 50%;
+  margin-right: -665px;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-align: center;
+
+  a, span{
+    color: $white;
+  }
+  a{
+    font-size: 12px;
+  }
+
+  .title{
+    font-family:$font-bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    width: 170px;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+  .more{
+    line-height: 13px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
+    padding: 8px 0;
+  }
+
+  .meteo, .views{
+    //overflow-y: auto;
+    //overflow-x: hidden;
+    min-width: 150px;
+    height: 430px;
+    position: relative;
+    min-height: inherit;
+    float: left;
+  }
+  .meteo{
+    background: rgba(38, 44, 51, 0.7);
+    .more{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      text-indent: -9999px;
+      background: rgba(0, 0, 0, 0.7);
+      &.spin{
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 6px;
+        left:50%;
+        width: 20px;
+        height: 17px;
+        background: url("../img/arrow-white.png") no-repeat center center;
+        background-size: 17px auto;
+        transition: all .5s ease 0s;
+      }
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+    .item{
+      border-bottom: 1px solid $gray-light;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      &:last-of-type{
+        border: none;
+      }
+      .info{
+        display: block;
+        .icon{
+          display: inline-block;
+          img{
+            max-width: 100%;
+          }
+        }
+        .temperature{
+          display: inline-block;
+          margin-left: 10px;
+          font-family: $font-light;
+          font-size: 40px;
+          line-height: 44px;
+          &:first-child{
+            margin-left: 0;
+          }
+          sup{
+            font-size: 20px;
+          }
+          sub{
+            font-size: 20px;
+            vertical-align: baseline;
+          }
+          .description{
+            font-family: $font-bold;
+            font-size: 12px;
+            line-height: 16px;
+            &:last-child.item{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .views{
+    padding-top: 20px;
+    background: rgba(38, 44, 51, 0.90);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &.show{
+      color: red;
+    }
+    .more{
+      width: 100%;
+      display: inline-block;
+      line-height: 13px;
+      padding: 8px 0;
+    }
+    .cams{
+      .item{
+        padding: 0 15px 10px;
+        &:last-child{
+          margin-bottom: 30px;
+        }
+        .camera{
+          position: relative;
+          a{
+            @extend .play-button;
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 120px;
+            height: 80px;
+            overflow: hidden;
+            border: 1px solid #D3D4D5;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            &:hover{
+              opacity: 0.5;
+            }
+          }
+          img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            height: auto;
+            display: block;
+            margin:0 auto;
+          }
+        }
+        .title{
+          font-family:$font-regular;
+          margin-top: 5px;
+          margin-bottom: 0;
+          text-transform: none;
+          width: 140px;
+          overflow: hidden;
+          white-space: nowrap;
+          -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    a:hover{
+      color: $gray-light;
+    }
+  }
+}
+
+/* Date Picker Diden*/
+.ui-datepicker{
+  display: none;
+  color: $gray;
+  background: $white;
+  padding: 15px;
+  width: 253px;
+  text-align: center;
+  border: 1px solid $gray-light-bg;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  thead{
+    display: table-header-group;
+  }
+  select{
+    text-transform: uppercase;
+    line-height: 20px;
+    font-family:$font-bold;
+    width: 22%;
+    font-size: 16px;
+    color: $darken-red;
+    background: none;
+    border: none;
+    outline:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  a{
+    color: $gray;
+  }
+  .ui-datepicker-header{
+    a.ui-corner-all{
+      position: relative;
+      background: $gray-light-bg;
+      text-indent: -9998px;
+      display: block;
+      float: left;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width:  6px;
+        height: 6px;
+        border-left: 2px solid $red-dark;
+        border-bottom: 2px solid $red-dark;
+        border-right: 0 solid transparent;
+        border-top: 0 solid transparent;
+      }
+      &:hover{
+        @extend .transition;
+        background: darken($gray-light-bg,30%);
+        &:after{
+          @extend .transition;
+          border-left-color: $white;
+          border-bottom-color: $white;
+        }
+      }
+    }
+    a.ui-datepicker-next{
+      float: right;
+      &:after{
+        left: 45%;
+        transform: translate(-50%, -50%) rotate(-135deg);
+      }
+    }
+  }
+  .ui-datepicker-calendar{
+    width: 100%;
+    td{
+      line-height: 36px;
+      &:hover,
+      &:focus{
+        background: $gray;
+        a{
+          color: $white;
+        }
+      }
+    }
+    .ui-datepicker-today{
+      background: $blue;
+      a{
+        color: $white;
+      }
+    }
+  }
+  .ui-datepicker-today{
+    background: $blue;
+    a{
+      color: $white;
+    }
+  }
+  .ui-datepicker-current-day{
+    background: $darken-red;
+    a{
+      color: $white;
+    }
+  }
+  .ui-datepicker-unselectable{
+    span{
+      color: $gray-light;
+    }
+  }
+  td.ui-datepicker-other-month{
+    &:hover{
+      background: none;
+      cursor: default;
+    }
+  }
+}
+
+.calendar{
+  float: right;
+  .ui-datepicker{
+    border:none;
+    width: 340px;
+    height: 320px;
+    td{
+      border: 3px solid $white;
+    }
+    thead{
+      display: none;
+    }
+    select{
+      width: 21%;
+      font-size: 24px;
+      line-height: 38px;
+    }
+    a,span{
+      font-size: 21px;
+      line-height: 24px;
+    }
+    .ui-datepicker-header{
+      padding-bottom: 15px;
+      border-bottom: 1px solid $gray-light-ccc;
+      a.ui-corner-all{
+        width:  32px;
+        height: 32px;
+      }
+    }
+    .ui-datepicker-month{
+      font-family:$font-light;
+    }
+    .ui-datepicker-year{
+      font-family:$font-bold;
+    }
+  }
+}
+
+

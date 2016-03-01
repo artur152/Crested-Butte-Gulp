@@ -1,0 +1,498 @@
+//= ../header.html
+
+    <div class="wraper">
+
+        <div class="page main">
+
+            <div class="weather">
+                <div class="meteo">
+                    <div class="item">
+                        <div class="title">Current Weather</div>
+                        <a href="#222" class="info">
+                            <div class="icon">
+                                <img src="img/cloud.png" width="48" height="48">
+                            </div>
+                            <div class="temperature">
+                                <div class="degree">
+                                    <span>62</span><sup>o</sup>
+                                    <div class="description">partly cloudy</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="title">Lifts+Trails</div>
+                        <a href="#222" class="info">
+                            <div class="temperature">
+                                <span>01</span><sub>/15</sub>
+                                <div class="description">Lifts</div>
+                            </div>
+                            <div class="temperature">
+                                <span>15</span><sub>/15</sub>
+                                <div class="description">Trails</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="title">snowfall</div>
+                        <a href="#222" class="info">
+                            <div class="icon">
+                                <img src="img/snowflake-white.png" width="46" height="52">
+                            </div>
+                            <div class="temperature">
+                                <span>17</span><sup>”</sup>
+                                <div class="description">24hr</div>
+                            </div>
+                        </a>
+                    </div>
+                    <a class="more" href="#hide">next</a>
+                </div>
+
+                <div class="views">
+                    <div class="title">cams</div>
+                    <div class="cams">
+                        <div class="item">
+                            <div class="info">
+                                <div class="camera">
+                                    <a href="#cam">
+                                        <img src="img/8.png" width="345" height="230">
+                                    </a>
+                                </div>
+                                <div class="title">GORE-TEX PowCam</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="info">
+                                <div class="camera">
+                                    <a href="#cam">
+                                        <img src="img/3.png" width="159" height="84">
+                                    </a>
+                                </div>
+                                <div class="title">Paradise Cam</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="info">
+                                <div class="camera">
+                                    <a href="#cam">
+                                        <img src="img/9.png" width="212" height="140">
+                                    </a>
+                                </div>
+                                <div class="title">Base Area Cam</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="more" href="#allcams">view all cams</a>
+                </div>
+            </div>
+
+            <div class="banner primary">
+                <div class="slick-slider">
+                    <div class="slider-item">
+                        <div class="slider-info">
+                            <div class="slider-image">
+                                <img src="img/banner-main-1.png" width="1600" height="839">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slider-info">
+                            <div class="slider-image">
+                                <img src="img/banner-main-2.png" width="1600" height="1134" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking">
+                <div class="wrapper">
+                    <div class="tabs" id="tabs">
+                        <div class="tabs-buttons">
+                            <ul>
+                                <li><a href="#lodging" class="primary-button active">Lodging</a></li>
+                                <li><a href="#flights" class="primary-button">Flights</a></li>
+                                <li><a href="#tickets" class="primary-button">tickets</a></li>
+                                <li><a href="#deals"   class="primary-button">Deals</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab tab-lodging" id="lodging">
+                            <form action="#form" class="booking-form">
+                                <div class="select input-number">
+                                    <label for="persons">Number of Guests</label>
+                                    <input type="number" id="persons" class="input-date persons" name="persons">
+                                </div>
+                                <input type="text" class="select input-date datepicker" id="lodging-datepicker-arriving"  placeholder="arriving" readonly>
+                                <input type="text" class="select input-date datepicker" id="lodging-datepicker-departing" placeholder="departing" readonly>
+                                <input type="submit" class="primary-button" value="book now">
+                            </form>
+                        </div>
+
+                        <div class="tab tab-flights" id="flights">
+                            <div class="flights">
+                                <form action="#form" class="booking-form">
+                                    <div class="select input-number">
+                                        <label for="persons1">Adults</label>
+                                        <input type="number" id="persons1" class="input-date persons" name="persons">
+                                    </div>
+                                    <input class="select input-date datepicker" id="flights-datepicker-arriving" type="text" placeholder="arriving" readonly>
+                                    <input class="select input-date datepicker" id="flights-datepicker-departing" type="text" placeholder="departing" readonly>
+                                    <input type="submit" value="book now" class="primary-button">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="tab tab-tickets" id="tickets">
+                            <div class="flights">
+                                <form action="#form" class="booking-form">
+                                    <div class="select input-number">
+                                        <label for="persons">Tickets</label>
+                                        <input type="number" id="persons2" class="input-date persons" name="persons">
+                                    </div>
+                                    <input class="select input-date datepicker" id="tickets-datepicker-arriving" type="text" placeholder="arriving" readonly>
+                                    <input class="select input-date datepicker" id="tickets-datepicker-departing" type="text" placeholder="departing" readonly>
+                                    <input type="submit" value="book now" class="primary-button">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="tab tab-deals" id="deals">
+                            <div class="deals">
+                                <form action="#form" class="booking-form">
+                                    <div class="select input-number">
+                                        <label for="persons">Deals</label>
+                                        <input type="number" id="persons3" class="input-date persons" name="persons">
+                                    </div>
+                                    <input class="select input-date datepicker" id="deals-datepicker-arriving" type="text" placeholder="arriving" readonly>
+                                    <input class="select input-date datepicker" id="deals-datepicker-departing" type="text" placeholder="departing" readonly>
+                                    <input type="submit" value="book now" class="primary-button">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="events">
+                        <div class="book-now-slider">
+                            <div class="banner secondary">
+                                <div class="slick-slider">
+
+                                    <div class="slider-item">
+                                        <div class="slider-info">
+                                            <div class="info">
+                                                <h2>Crested Butte
+                                                    <span>week pass</span>
+                                                </h2>
+                                                <a href="#sale" class="sale">sale</a>
+                                                <a href="#book" class="primary-button">book now</a>
+                                            </div>
+                                        </div>
+                                        <div class="slider-image">
+                                            <img src="img/secondary-slider-1.png" width="469" height="392" >
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="slider-info">
+                                            <div class="slider-image">
+                                                <img src="img/secondary-slider-2.png" width="604" height="570">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="slider-info">
+                                            <div class="slider-image">
+                                                <img src="img/secondary-slider-3.png" width="482" height="468">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news">
+
+                            <div class="news-item current">
+                                <div class="preview">
+                                    <a href="#2">
+                                        <img src="img/news-1.png" width="370" height="707">
+                                    </a>
+                                    <div class="date">
+                                        <div class="month">nov</div>
+                                        <div class="day">11</div>
+                                    </div>
+                                </div>
+                                <div class="item-info">
+                                    <div class="info">
+                                        <h2>What’s Happening</h2>
+                                        <h4>Rail jam 2015</h4>
+                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atolores et quasint...</p>
+                                    </div>
+                                    <a href="#4" class="more">View Event Details</a>
+                                </div>
+                            </div>
+
+                            <div class="news-item upcoming">
+                                <div class="preview">
+                                    <a href="#2">
+                                        <img src="img/news-2.png" width="120" height="120">
+                                    </a>
+                                    <div class="date">
+                                        <div class="month">nov</div>
+                                        <div class="day">11</div>
+                                    </div>
+                                </div>
+                                <div class="item-info">
+                                    <div class="info">
+                                        <h4>CB Film festival</h4>
+                                        <p>voluptatum deleniti atolores...</p>
+                                    </div>
+                                    <a href="#4" class="more">View Event Details</a>
+                                </div>
+                            </div>
+
+                            <div class="news-item upcoming">
+                                <div class="preview">
+                                    <a href="#2">
+                                        <img src="img/news-3.png" width="189" height="125">
+                                    </a>
+                                    <div class="date">
+                                        <div class="month">nov</div>
+                                        <div class="day">11</div>
+                                    </div>
+                                </div>
+                                <div class="item-info">
+                                    <div class="info">
+                                        <h4>Downtown concert series</h4>
+                                        <p>voluptatum deleniti atolores et quasint...</p>
+                                    </div>
+                                    <a href="#4" class="more">View Event Details</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="passion">
+                <div class="title">my passion is</div>
+                <div class="passion-slider">
+                    <div class="banner third">
+                        <div class="slick-slider-passion">
+
+                            <div class="slider-item">
+                                <div class="slider-info">
+                                    <a href="#book" class="info">
+                                        <div class="title">
+                                            <span>family</span>
+                                            <span>time</span>
+                                        </div>
+                                    </a>
+                                    <div class="slider-image">
+                                        <a href="#1">
+                                            <img src="img/passion.jpg" width="380" height="253">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-info">
+                                    <a href="#book" class="info">
+                                        <div class="title">
+                                            <span>couples</span>
+                                            <span>time</span>
+                                        </div>
+                                    </a>
+                                    <div class="slider-image">
+                                        <a href="#1">
+                                            <img src="img/passion-1.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-info">
+                                    <a href="#book" class="info">
+                                        <div class="title">
+                                            <span>living</span>
+                                            <span>here</span>
+                                        </div>
+                                    </a>
+                                    <div class="slider-image">
+                                        <a href="#1">
+                                            <img src="img/passion-2.jpg" width="800" height="530">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-info">
+                                    <a href="#book" class="info">
+                                        <div class="title">
+                                            <span>group</span>
+                                            <span>planning</span>
+                                        </div>
+                                    </a>
+                                    <div class="slider-image">
+                                        <a href="#1">
+                                            <img src="img/passion-3.jpg" width="385" height="257">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-info">
+                                    <a href="#book" class="info">
+                                        <div class="title">
+                                            <span>i</span>
+                                            <span>do</span>
+                                        </div>
+                                    </a>
+                                    <div class="slider-image">
+                                        <a href="#1">
+                                            <img src="img/banner-main-2.png" width="1600" height="1134">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-info">
+                                    <a href="#book" class="info">
+                                        <div class="title">
+                                            <span>U</span>
+                                            <span>too</span>
+                                        </div>
+                                    </a>
+                                    <div class="slider-image">
+                                        <a href="#1">
+                                            <img src="img/passion-4.png" width="440" height="293">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="updates">
+                <div class="wrapper">
+
+                    <div class="updates-last">
+                        <div class="title-updates">
+                            <h4>Butte Buzz - the latest news & updates</h4>
+                        </div>
+
+                        <a href="#more" class="more">view all</a>
+
+                        <div class="items">
+                            <div class="item-updates">
+                                <div class="preview">
+                                    <a href="#2">
+                                        <img src="img/8.png" width="345" height="230">
+                                    </a>
+                                </div>
+                                <div class="item-info">
+                                    <div class="date">
+                                        <div class="day">17</div>
+                                        <div class="month">may</div>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#2">
+                                            <h4>the Ultimate skiier</h4>
+                                            <p>We are hosting the 2nd Annual Ultimate Snowmobiler. After the lifts close for skiing and riding, there will be three days of powder on the backcountry hear about exclusive deals, the latest news, products releases backcountry hear about exclusive deals, the latest news</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item-updates">
+                                <div class="preview">
+                                    <a href="#2">
+                                        <img src="img/10.png" width="289" height="193">
+                                    </a>
+                                </div>
+                                <div class="item-info">
+                                    <div class="date">
+                                        <div class="day">18</div>
+                                        <div class="month">may</div>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#2">
+                                            <h4>the Ultimate</h4>
+                                            <p>We are hosting the 2nd Annual Ultimate Snowmobiler. After the lifts close for skiing and riding, there will be three days of powder</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo">
+                        <div class="title-updates">
+                            <h4>Butte Buzz - the latest news & updates</h4>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li><a href="#facebook" class="facebook">facebook</a></li>
+                                <li><a href="#twitter" class="twitter">twitter</a></li>
+                                <li><a href="#pinterest" class="pinterest">pinterest</a></li>
+                                <li><a href="#instagram" class="instagram">instagram</a></li>
+                                <li><a href="#vimeo" class="vimeo">vimeo</a></li>
+                            </ul>
+                        </div>
+                        <div class="latest-photos">
+                            <div class="item-square-main photo-item vimeo">
+                                <a href="#1">
+                                    <img src="img/secondary-slider-2.png" width="" height="">
+                                </a>
+                            </div>
+                            <div class="item-rect photo-item instagram">
+                                <a href="#1">
+                                    <img src="img/passion-4.png" width="440" height="293">
+                                </a>
+                            </div>
+                            <div class="item-rect photo-item vimeo">
+                                <a href="#1">
+                                    <img src="img/secondary-slider-3.png" width="482" height="468">
+                                </a>
+                            </div>
+                            <div class="item-square photo-item instagram">
+                                <a href="#1">
+                                    <img src="img/14.png" width="644" height="427">
+                                </a>
+                            </div>
+                            <div class="item-square photo-item instagram">
+                                <a href="#1">
+                                    <img src="img/15.png" width="222" height="335">
+                                </a>
+                            </div>
+                            <div class="item-square photo-item instagram">
+                                <a href="#1">
+                                    <img src="img/16.png" width="552" height="367">
+                                </a>
+                            </div>
+                            <div class="item-square photo-item">
+                                <a href="#1">
+                                    <img src="img/gallery-2.png" width="126" height="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+//= ../footer.html

@@ -1,0 +1,57 @@
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: $font-regular;
+  color: $white;
+  margin: 0;
+}
+
+strong{
+  font-weight: normal;
+  font-family: $font-bold;
+}
+
+p{
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-regular;
+}
+
+a,
+a *,
+a::before,
+a::after {
+  text-decoration: none;
+}
+
+h2{
+  font-family: $font-bold;
+  font-size: 30px;
+  line-height: 34px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h3{
+  font-family: $font-regular;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight:normal;
+}
+h4{
+  font-family: $font-regular;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 25px 0;
+}
+
+
+
+
+
+
+

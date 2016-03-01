@@ -1,0 +1,233 @@
+.header-search {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-family: $font-regular;
+  font-size: 16px;
+  line-height: 20px;
+  text-indent: 5px;
+  color: $white;
+  width: 68px;
+  height: 73px;
+  background-color: $red;
+  background-image:  url("../img/search.png");
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .5s ease 0s;
+  &:hover{
+    background-color: #AB171D;
+  }
+  &::-webkit-input-placeholder {
+    color: transparent;
+  }
+  &::-moz-placeholder {
+    color: transparent;
+  }
+  &:-moz-placeholder {
+    color: transparent;
+  }
+  &:-ms-input-placeholder {
+    color: transparent;
+  }
+}
+
+.header-submit{
+  display: none;
+  position: relative;
+  width: 60px;
+  z-index: 0;
+  text-indent: -9999px;
+  font-family: $font-regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: $white;
+  padding: 27px 0;
+  vertical-align: middle;
+  background: transparent;
+  background-size: 14px auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  white-space: pre;
+}
+
+.primary-button{
+  text-align: center;
+  display: inline-block;
+  font-family: $font-bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: $gray;
+  padding: 19px 40px;
+  vertical-align: middle;
+  border: 1px solid $white;
+  outline: none;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all .5s ease 0s;
+  &:hover{
+    opacity:.8;
+    transition: all .5s ease 0s;
+  }
+}
+
+.input-secondary {
+  display: inline-block;
+  font-family: $font-regular;
+  font-size: 16px;
+  line-height: 20px;
+  text-indent: 5px;
+  color: $gray;
+  background: $white;
+  padding: 16px 15px 16px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 390px;
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all .5s ease 0s;
+
+  &::-webkit-input-placeholder {
+    color: $gray;
+  }
+  &::-moz-placeholder {
+    color: $gray;
+  }
+  &:-moz-placeholder {
+    color: $gray;
+  }
+  &:-ms-input-placeholder {
+    color: $gray;
+  }
+}
+
+.secondary-button{
+  text-align: center;
+  display: inline-block;
+  font-family: $font-bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: $white;
+  background: $darken-red;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 15px 45px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+    @extend .transition;
+  }
+}
+
+.input-date{
+  font-family: $font-book;
+  font-size: 18px;
+  line-height: 40px;
+  width: 100%;
+  color: $white;
+  text-transform: capitalize;
+  vertical-align: bottom;
+  background-color: transparent;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 100% 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::-webkit-input-placeholder {
+    color: $white;
+  }
+  &::-moz-placeholder {
+    color: $white;
+  }
+  &:-moz-placeholder {
+    color: $white;
+  }
+  &:-ms-input-placeholder {
+    color: $white;
+  }
+}
+
+.events-calendar-field{
+  display: block;
+  width: 100%;
+  font-family: $font-book;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: $gray-light-2;
+  margin-bottom: 20px;
+  padding: 15px 20px 15px 20px;
+  background-image: url("../img/select-triangle.png");
+  background-color: $gray-light-bg;
+  background-repeat:no-repeat;
+  background-position: right 20px center;
+  border: none;
+  border-bottom: 2px solid $red-light;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  &:first-child{
+    margin-left: 0;
+  }
+}
+
+.events-calendar-form{
+  .title{
+    font-family:$font-book;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+  }
+  .date-input{
+    @extend .clearfix;
+    input{
+      background-image: url(../img/calendar-red.png);
+      float: left;
+      width: 48%;
+      margin-left: 4%;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+  }
+  .date-submit{
+    @extend .clearfix;
+    input.search{
+      background: $red;
+    }
+    input{
+      float: left;
+      border: none;
+      width:48%;
+      margin-left: 4%;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+  }
+}
+
